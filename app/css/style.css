@@ -76,6 +76,7 @@ body {
 }
 .main {
   font-size: 0;
+  padding: 40px 0 3px;
 }
 .sidebar {
   font-size: 14px;
@@ -95,12 +96,21 @@ body {
 .sidebar-menu__item {
   border-bottom: 1px solid #f1f1f1;
 }
+.sidebar-menu__item--light {
+  border-color: #ea7e73;
+}
 .sidebar-menu__item:last-child {
   border-bottom: 0;
 }
 .sidebar-menu__link {
   display: block;
   padding: 9px 0 4px;
+}
+.sidebar-menu__link--light {
+  color: #fff;
+}
+.sidebar-menu--red {
+  background: #e74c3c;
 }
 .blog {
   font-size: 14px;
@@ -141,6 +151,18 @@ body {
   text-align: right;
 }
 @media screen and (min-width: 768px) {
+  .top-menu__list {
+    text-align: right;
+    font-size: 0;
+  }
+  .top-menu__item {
+    display: inline-block;
+    vertical-align: top;
+    border: 0;
+  }
+  .top-menu__link {
+    padding: 30px 15px;
+  }
   .content {
     width: 70%;
     display: inline-block;

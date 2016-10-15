@@ -100,6 +100,7 @@ body{
 
 .main{
     font-size: 0;
+    padding: 40px 0 3px;
 }
 
 .sidebar{
@@ -118,6 +119,9 @@ body{
     }
     &__item{
         border-bottom: 1px solid #f1f1f1;
+        &--light{
+            border-color: #ea7e73;
+        }
         &:last-child{
             border-bottom: 0;
         }
@@ -125,6 +129,12 @@ body{
     &__link{
         display: block;
         padding: 9px 0 4px;
+        &--light{
+            color: #fff;
+        }
+    }
+    &--red{
+        background: #e74c3c;
     }
 }
 
@@ -171,6 +181,20 @@ body{
 }
 
 @media screen and (min-width: 768px) {
+    .top-menu{
+        &__list{
+            text-align: right;
+            font-size: 0;
+        }
+        &__item{
+            display: inline-block;
+            vertical-align: top;
+            border: 0;
+        }
+        &__link{
+            padding: 30px 15px;
+        }
+    }
     .content{
         width: 70%;
         display: inline-block;
