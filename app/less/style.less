@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'roboto_mediumregular';
+    src: url('../fonts/robotomedium-webfont.eot');
+    src: url('../fonts/robotomedium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotomedium-webfont.woff2') format('woff2'),
+         url('../fonts/robotomedium-webfont.woff') format('woff'),
+         url('../fonts/robotomedium-webfont.ttf') format('truetype'),
+         url('../fonts/robotomedium-webfont.svg#roboto_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/robotoregular-webfont.eot');
+    src: url('../fonts/robotoregular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotoregular-webfont.woff2') format('woff2'),
+         url('../fonts/robotoregular-webfont.woff') format('woff'),
+         url('../fonts/robotoregular-webfont.ttf') format('truetype'),
+         url('../fonts/robotoregular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto_slabregular';
+    src: url('../fonts/robotoslabregular-webfont.eot');
+    src: url('../fonts/robotoslabregular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotoslabregular-webfont.woff2') format('woff2'),
+         url('../fonts/robotoslabregular-webfont.woff') format('woff'),
+         url('../fonts/robotoslabregular-webfont.ttf') format('truetype'),
+         url('../fonts/robotoslabregular-webfont.svg#roboto_slabregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@link_color: 		#2f3c4e;
+@font_normal: 		'robotoregular', sans-serif;
+@font_medium: 		'roboto_mediumregular', sans-serif;
+@font_custom: 		'roboto_slabregular', sans-serif;
+
+*{
+	box-sizing: border-box;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+a{
+	color: @link_color;
+    text-decoration: none;
+    transition: 0.4s;
+}
+body{
+	background: #f1f1f1;
+	font: 14px/20px @font_normal;
+    color: @link_color;
+}
+
+.container{
+    max-width: 930px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    font: 12px/30px @font_medium;
+    padding: 0 20px;
+    &--red{
+        color: #fff;
+        background: #e74c3c;
+    }
+}
+
+.header{
+    background: #fff;
+}
+.top-menu{
+    &__list{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    &__item{
+        border-bottom: 1px solid #eee;
+    }
+    &__link{
+        display: block;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 10px 15px 9px;
+        font-family: @font_medium;
+        &:hover{
+            color: #fff;
+            background: #e74c3c;
+        }
+    }
+}
+
+.main{
+    font-size: 0;
+}
+
+.sidebar{
+    font-size: 14px;
+}
+.sidebar-menu{
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    margin: 0 0 30px;
+    padding: 17px 20px 24px;
+    &__list{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    &__item{
+        border-bottom: 1px solid #f1f1f1;
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
+    &__link{
+        display: block;
+        padding: 9px 0 4px;
+    }
+}
+
+.blog{
+    font-size: 14px;
+    &__list{}
+    &__item{
+        background: #fff;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        margin: 0 0 30px;
+        border-radius: 3px;
+    }
+    &__image{
+        &__thumbnail{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__title{
+        padding: 19px 20px 20px;
+        font: normal 24px/32px @font_custom;
+        position: relative;
+        &:before{
+            content: "";
+            width: 35px;
+            height: 35px;
+            background: url(../img/triangle-b-bg.png) no-repeat 0 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    &__info{
+        padding: 17px 20px;
+    }
+    &__txt{
+        padding: 0 0 20px;
+    }
+    &__more{
+        border-top: 1px solid #f1f1f1;
+        padding: 20px 0 0;
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .content{
+        width: 70%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 15px;
+    }
+    .sidebar{
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 15px;
+    }
+}
